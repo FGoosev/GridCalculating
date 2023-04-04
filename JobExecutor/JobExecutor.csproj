@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A70001C2-F395-4B25-89BA-A6DA17B27C5F}</ProjectGuid>
+    <ProjectGuid>{751FB9F4-6023-4290-95D0-E33B66251ABD}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>GridLogic</RootNamespace>
-    <AssemblyName>GridLogic</AssemblyName>
+    <RootNamespace>JobExecutor</RootNamespace>
+    <AssemblyName>JobExecutor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,13 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GridJobController.cs" />
-    <Compile Include="Job.cs" />
-    <Compile Include="JobComparer.cs" />
-    <Compile Include="JobDistributing.cs" />
     <Compile Include="JobExecute.cs" />
-    <Compile Include="JobResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

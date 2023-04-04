@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Runtime.Remoting;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
-using GridLogic;
+using System.Reflection;
+using GridLibrary;
 
 namespace GridClient
 {
@@ -15,6 +16,8 @@ namespace GridClient
         public static void Main(string[] args)
         {
             ChannelServices.RegisterChannel(new TcpChannel(), false);
+           
+
             GridJobController controller = (GridJobController)Activator.GetObject(typeof(GridJobController), "tcp://localhost:3000/Grid");
             if(controller == null)
             {
@@ -28,7 +31,7 @@ namespace GridClient
             {
                 try
                 {
-                    JobExecute exe = new JobExecute();
+                    IJobExecute exe;
                     var start = DateTime.Now;
                     var hasJobs = false;
                     for(int i = 0; i < 100; i++)

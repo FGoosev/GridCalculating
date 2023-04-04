@@ -17,12 +17,14 @@ namespace GridLibrary
        
         public static int LastValidId { get; private set; }
 
+        //Сюда передать Длл: и инициализировать класс
         public static void SetJob(int boardSize)
         {
             size = boardSize;
             hasJob = true;
             maxMatrCells = boardSize * boardSize;
             currentIndex = 0;
+
 
             maxInt = (int)Math.Pow(2, maxMatrCells);
         }
@@ -54,7 +56,6 @@ namespace GridLibrary
                 {
                     currentIndex = 0;
                     hasJob = false;
-                    Console.WriteLine("Выполнение закончено");
                 }
                 return job;
             }

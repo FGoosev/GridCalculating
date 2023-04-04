@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grid.DAL
+namespace GridLogic
 {
+    [Serializable]
     public class JobResult
     {
         public int Count { get; set; }

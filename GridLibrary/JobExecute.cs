@@ -1,5 +1,4 @@
-﻿using GridLogic;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GridLibrary
 {
-    public class JobExecute
+    public class JobExecute : IJobExecute
     {
         public byte[] p = new byte[9];
 
@@ -42,7 +41,6 @@ namespace GridLibrary
 
             return arr;
         }
-
         public Boolean IsLegal(int size, bool[,] cellTaken)
         {
             for (int i = 0; i < size; i++)

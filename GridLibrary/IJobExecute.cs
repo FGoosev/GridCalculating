@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Grid.DAL
+namespace GridLibrary
 {
-    public class JobResult
+    public interface IJobExecute
     {
-        public int Count { get; set; }
-        public int LastValidId { get; set; }
-
+        JobResult Execute(Job job);
     }
 }

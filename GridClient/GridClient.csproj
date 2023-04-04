@@ -51,13 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Grid.DAL\Grid.DAL.csproj">
-      <Project>{85eab7f8-c0d1-4957-86e4-087de1cef06d}</Project>
-      <Name>Grid.DAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GridLogic\GridLogic.csproj">
-      <Project>{a70001c2-f395-4b25-89ba-a6da17b27c5f}</Project>
-      <Name>GridLogic</Name>
+    <ProjectReference Include="..\GridLibrary\GridLibrary.csproj">
+      <Project>{7663eec8-665f-4d61-a051-6242259bc755}</Project>
+      <Name>GridLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
