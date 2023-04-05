@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,24 +15,42 @@ namespace GridLibrary
         static int currentIndex = 0;
         static int maxMatrCells;
         static int maxInt;
+        public static object obj;
+        public static Type type;
+
        
         public static int LastValidId { get; private set; }
 
-        //Сюда передать Длл: и инициализировать класс
-        public static void SetJob(int boardSize)
+        public static void SetJob(int boardSize, object o, Type t)
         {
+            obj = o;
+            type = t;
             size = boardSize;
             hasJob = true;
             maxMatrCells = boardSize * boardSize;
             currentIndex = 0;
 
-
             maxInt = (int)Math.Pow(2, maxMatrCells);
+        }
+
+        public static ImportDll GetExecute()
+        {
+            if(obj != null)
+            {
+                var exe = new ImportDll()
+                {
+                    Obj = obj,
+                    Type = type
+                };
+                return exe;
+            }
+            return null;
         }
 
         //Исправить
         public static Job GetJob()
         {
+
             if (hasJob)
             {
                 
@@ -41,16 +60,15 @@ namespace GridLibrary
                 {
                     currentIndex = maxInt - 1;
                 }
-                Console.WriteLine(currentIndex);
+                LastValidId = currentIndex;
+
+                currentIndex = LastValidId;
                 var job = new Job()
                 {
                     SizeBoard = size,
                     StartIndex = startIndex,
                     EndIndex = currentIndex
                 };
-                LastValidId = currentIndex;
-
-                currentIndex = LastValidId;
 
                 if(currentIndex + 2 >= maxInt)
                 {

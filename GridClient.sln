@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridServer", "GridServer\Gr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridLibrary", "GridLibrary\GridLibrary.csproj", "{7663EEC8-665F-4D61-A051-6242259BC755}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridJob", "GrigJob\GridJob.csproj", "{09731C5F-01CB-4013-9E43-E098A8FDDF98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{7663EEC8-665F-4D61-A051-6242259BC755}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7663EEC8-665F-4D61-A051-6242259BC755}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7663EEC8-665F-4D61-A051-6242259BC755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09731C5F-01CB-4013-9E43-E098A8FDDF98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09731C5F-01CB-4013-9E43-E098A8FDDF98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09731C5F-01CB-4013-9E43-E098A8FDDF98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09731C5F-01CB-4013-9E43-E098A8FDDF98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

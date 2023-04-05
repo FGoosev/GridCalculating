@@ -41,12 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GridJobController.cs" />
-    <Compile Include="IJobExecute.cs" />
+    <Compile Include="ImportDll.cs" />
+    <Compile Include="Controller.cs" />
     <Compile Include="Job.cs" />
     <Compile Include="JobComparer.cs" />
     <Compile Include="JobDistributing.cs" />
-    <Compile Include="JobExecute.cs" />
     <Compile Include="JobResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

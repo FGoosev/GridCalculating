@@ -1,13 +1,17 @@
-﻿using System;
+﻿
+using GridLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GridLibrary
+namespace GrigJob
 {
-    public class JobExecute : IJobExecute
+    [Serializable]
+    public class JobExecute
     {
+       
         public byte[] p = new byte[9];
 
         public int count;
@@ -151,6 +155,7 @@ namespace GridLibrary
                 Count = countResult,
                 LastValidId = job.EndIndex
             };
+
             return result;
         }
     }

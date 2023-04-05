@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GridLibrary
 {
-    public interface IJobExecute
+    [Serializable]
+    public class ImportDll
     {
-        JobResult Execute(Job job);
+        public object Obj { get; set; }
+        public Type Type { get; set; }
     }
 }
